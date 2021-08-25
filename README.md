@@ -1,6 +1,4 @@
-# URL Shortener
-
-## 프로젝트 설명
+# URL-Shortener
 bit/ly처럼 
 가변적 길이의 URL을 5자리 Base62 해시값으로 URL 길이를 줄여주는 API
 
