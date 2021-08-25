@@ -1,0 +1,23 @@
+version: "3"
+services:
+  # Database
+  postgres-link:
+    build:
+      context: .
+      dockerfile: postgres-link/postgres-link.Dockerfile
+    environment:
+      POSTGRES_PASSWORD: test
+    image: test
+    ports:
+      - "35431:5432"
+
+  # API
+  api-link:
+    build:
+      context: .
+      dockerfile: api-link/api-link.Dockerfile
+    image: test/api-link
+    ports:
+      - "5005:5005"
+    depends_on: 
+      - postgres-link
